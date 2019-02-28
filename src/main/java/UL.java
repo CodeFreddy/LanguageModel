@@ -69,7 +69,7 @@ public class UL {
             {
                 String queryStr = entry.getValue();
                 String queryId = entry.getKey();
-                results = getRanked(queryStr, queryId);
+                results = getRanked(queryStr);
                 int i = 0;
                 for(Map.Entry<String, Float> entry1: results.entrySet())
                 {
@@ -85,7 +85,7 @@ public class UL {
         writeToRunFile(runFileList, outputPath+"/"+outputName);
     }
 
-    private HashMap<String, Float> getRanked(String queryStr, String queryId) throws IOException{
+    private HashMap<String, Float> getRanked(String queryStr) throws IOException{
         IndexSearcher indexSearcher = new IndexSearcher(getIndexReader(INDEX_DIR));
         indexSearcher.setSimilarity(getSimilarity());
 
@@ -99,7 +99,7 @@ public class UL {
             for(int i = 0; i < hits.length; i++)
             {
                 Document doc = indexSearcher.doc(hits[i].doc);
-                String docId = doc.get("paraid");
+                String docId = doc.getField("paraid").stringValue();
                 String docBody = doc.get("content");
                 ArrayList<Float> pwt = new ArrayList<>();
 
@@ -185,11 +185,11 @@ public class UL {
         return list.size();
     }
 
-    public static ArrayList<String> unigramAnalyze(String docBoday) throws IOException {
+    public static ArrayList<String> unigramAnalyze(String docBody) throws IOException {
         ArrayList<String> res = new ArrayList<>();
 
         Analyzer analyzer = new UnigramAnalyzer();
-        TokenStream tokenStream = analyzer.tokenStream("content",docBoday);
+        TokenStream tokenStream = analyzer.tokenStream("content",docBody);
 
         CharTermAttribute charTermAttribute = tokenStream.addAttribute(CharTermAttribute.class);
         tokenStream.reset();
