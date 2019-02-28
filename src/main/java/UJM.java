@@ -31,7 +31,7 @@ public class UJM {
     private  static String output = "";
     private int resultsNum;
     private String teamName = "Team3";
-    private String methodName = "UnigramLanguageModel-Laplace-Smoothing";
+    private String methodName = "UnigramLanguageModel-JM-Smoothing";
     // returns IndexReader
     private static IndexReader getIndexReader(String path) throws IOException {
         return DirectoryReader.open(FSDirectory.open((new File(path).toPath())));
