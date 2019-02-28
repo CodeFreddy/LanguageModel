@@ -73,7 +73,7 @@ public class UL {
                 int i = 0;
                 for(Map.Entry<String, Float> entry1: results.entrySet())
                 {
-                    String runFileString = queryStr + " Q0 " + entry1.getKey() + " " + i++ + " " + entry1.getValue() + " " + teamName + " " + methodName;
+                    String runFileString = queryId + " Q0 " + entry1.getKey() + " " + i++ + " " + entry1.getValue() + " " + teamName + " " + methodName;
                     runFileList.add(runFileString);
                 }
             }
@@ -92,7 +92,7 @@ public class UL {
         QueryParser parser = new QueryParser("content", new EnglishAnalyzer());
         HashMap<String, Float> doc_score = new HashMap<>();
         try {
-            Query q = parser.parse(queryStr);
+            Query q = parser.parse(QueryParser.escape(queryStr));
             TopDocs topDocs = indexSearcher.search(q, resultsNum);
             ScoreDoc[] hits = topDocs.scoreDocs;
 
