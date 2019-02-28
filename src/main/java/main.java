@@ -58,17 +58,16 @@ class Main {
         System.out.println("length is: " + pageList.size());
 
 
-        UL page_ul = new UL(pageMap, Max_Results, INDEX_DIRECTORY);
-        UL section_ul = new UL(sectionMap, Max_Results, INDEX_DIRECTORY);
-        writeFile("UnigramLanguageModel-Laplace-Page.run", page_ul.getList());
-        writeFile("UnigrameLanguageModel-Laplace-Section.run", section_ul.getList());
+        UL page_ul = new UL(pageMap, Max_Results, INDEX_DIRECTORY, OUTPUT_DIR,"UnigramLanguageModel-Laplace-Page.run");
+        UL section_ul = new UL(sectionMap, Max_Results, INDEX_DIRECTORY, OUTPUT_DIR, "UnigramLanguageModel-Laplace-Section.run");
+
 
         UDS page_uds = new UDS(pageMap, Max_Results, INDEX_DIRECTORY, OUTPUT_DIR, "UnigramLanguageModel-UDS-Page.run");
         UDS section_uds = new UDS(sectionMap,Max_Results, INDEX_DIRECTORY, OUTPUT_DIR, "UnigramLanguageModel-UDS-Section.run");
-        UJM page_ujm = new UJM(pageMap, Max_Results, INDEX_DIRECTORY);
-        UJM section_ujm = new UJM(sectionMap, Max_Results, INDEX_DIRECTORY);
-        writeFile("UnigramLanguageModel-JM-Page.run", page_ujm.getList());
-        writeFile("UnigramLanguageModel-JM-Section.run", section_ujm.getList());
+//        UJM page_ujm = new UJM(pageMap, Max_Results, INDEX_DIRECTORY);
+//        UJM section_ujm = new UJM(sectionMap, Max_Results, INDEX_DIRECTORY);
+//        writeFile("UnigramLanguageModel-JM-Page.run", page_ujm.getList());
+//        writeFile("UnigramLanguageModel-JM-Section.run", section_ujm.getList());
 
 
         System.out.println("Finished");
