@@ -64,9 +64,9 @@ class Main {
 //
 //        UDS page_uds = new UDS(pageMap, Max_Results, INDEX_DIRECTORY, OUTPUT_DIR, "UnigramLanguageModel-UDS-Page.run");
 //        UDS section_uds = new UDS(sectionMap,Max_Results, INDEX_DIRECTORY, OUTPUT_DIR, "UnigramLanguageModel-UDS-Section.run");
-//        UJM page_ujm = new UJM(pageMap, Max_Results, INDEX_DIRECTORY);
-//        UJM section_ujm = new UJM(sectionMap, Max_Results, INDEX_DIRECTORY);
-//        writeFile("UnigramLanguageModel-JM-Page.run", page_ujm.getList());
+        UJM page_ujm = new UJM(pageMap, Max_Results, INDEX_DIRECTORY);
+        UJM section_ujm = new UJM(sectionMap, Max_Results, INDEX_DIRECTORY);
+        writeFile("UnigramLanguageModel-JM-Page.run", page_ujm.getList());
 //        writeFile("UnigramLanguageModel-JM-Section.run", section_ujm.getList());
 
         // BL
