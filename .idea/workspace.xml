@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7696920-343d-47c1-ad92-ed3a11cfd79d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/RunFileString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS953.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UDS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UDS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UJM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UJM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,10 +16,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UJM.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UJM.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/UJM.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="159">
               <caret line="31" column="106" selection-start-line="31" selection-start-column="106" selection-end-line="31" selection-end-column="106" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -36,8 +31,8 @@
       <file leaf-file-name="UL.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/UL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="33" column="106" selection-start-line="33" selection-start-column="106" selection-end-line="33" selection-end-column="106" />
+            <state relative-caret-position="-504">
+              <caret line="80" column="19" lean-forward="true" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="958">
+              <caret line="77" column="41" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,12 +114,12 @@
         <option value="$PROJECT_DIR$/src/main/java/QueryData.java" />
         <option value="$PROJECT_DIR$/src/main/java/SearchData.java" />
         <option value="$PROJECT_DIR$/src/main/java/QueryExpansion/QueryExpansion.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main.java" />
         <option value="$PROJECT_DIR$/src/RunFileString.java" />
         <option value="$PROJECT_DIR$/src/main/java/RunFileString.java" />
         <option value="$PROJECT_DIR$/src/main/java/UDS.java" />
         <option value="$PROJECT_DIR$/src/main/java/UL.java" />
         <option value="$PROJECT_DIR$/src/main/java/UJM.java" />
+        <option value="$PROJECT_DIR$/src/main/java/main.java" />
       </list>
     </option>
   </component>
@@ -404,7 +399,21 @@
       <option name="project" value="LOCAL" />
       <updated>1551043932050</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="modify some code of UJM.java and UL.java">
+      <created>1551315996921</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1551315996921</updated>
+    </task>
+    <task id="LOCAL-00016" summary="modify some code of UJM.java and UL.java">
+      <created>1551316254227</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1551316254227</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -424,7 +433,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4989059" weight="0.02739726" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.030634573" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30196938" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989059" visible="true" weight="0.014752371" />
       <window_info id="Learn" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -472,7 +481,8 @@
     <MESSAGE value="add three language model methods, UL, UJM, UDS" />
     <MESSAGE value="add some modifications" />
     <MESSAGE value="debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug" />
+    <MESSAGE value="modify some code of UJM.java and UL.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify some code of UJM.java and UL.java" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -781,16 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RunFileString.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -810,8 +810,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/UL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="33" column="106" selection-start-line="33" selection-start-column="106" selection-end-line="33" selection-end-column="106" />
+        <state relative-caret-position="-504">
+          <caret line="80" column="19" lean-forward="true" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -820,8 +820,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/UJM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
+        <state relative-caret-position="159">
           <caret line="31" column="106" selection-start-line="31" selection-start-column="106" selection-end-line="31" selection-end-column="106" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="958">
+          <caret line="77" column="41" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
