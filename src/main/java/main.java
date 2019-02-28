@@ -30,10 +30,10 @@ class Main {
 
 
 
-//        INDEX_DIRECTORY = args[0];
-//        queryPath = args[1];
-//        //dataPath = args[2];
-//        OUTPUT_DIR = args[2];
+        INDEX_DIRECTORY = args[0];
+        queryPath = args[1];
+        //dataPath = args[2];
+        OUTPUT_DIR = args[2];
 
         //indexer = new IndexData(INDEX_DIRECTORY, dataPath);
         QueryData queryData = new QueryData(queryPath);
