@@ -31,7 +31,7 @@ public class UL {
     public IndexReader indexReader;
     public IndexSearcher indexSearcher;
 
-    PriorityQueue<DocResults> docQueue = new PriorityQueue<>((a, b) -> (a.score < b.score ? 1 : a .score > b.score ?  -1 : 0));
+    PriorityQueue<DocResults> docQueue = new PriorityQueue<>((a, b) -> (a.score > b.score ? 1 : a .score < b.score ?  -1 : 0));
 
 
     public UL(Map<String, String> queriesStr, int resultsNum, String indexPath) throws IOException, ParseException {
@@ -95,7 +95,7 @@ public class UL {
                            results.get(queryId).put(paraId, 0.0f);
                        }
 
-                       float score = results.get(queryId).get(paraId);
+                       float score = scores[i].score;
 
                        score += (float) (scores[i].score / (docSize + wordsSize));
                        results.get(queryId).put(paraId, score);

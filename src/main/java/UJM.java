@@ -29,7 +29,7 @@ public class UJM {
     public IndexReader indexReader;
     public IndexSearcher indexSearcher;
 
-    PriorityQueue<DocResults> docQueue = new PriorityQueue<>((a, b) -> (a.score < b.score ? 1 : a .score > b.score ?  -1 : 0));
+    PriorityQueue<DocResults> docQueue = new PriorityQueue<>((a, b) -> (a.score > b.score ? 1 : a .score < b.score ?  -1 : 0));
 
     public UJM(Map<String, String> queriesStr, int resultsNum, String indexPath) throws IOException{
         runFileContent = new ArrayList<>();
@@ -42,11 +42,11 @@ public class UJM {
 
         indexReader = indexSearcher.getIndexReader();
         float sumTotalTermFreq = indexReader.getSumTotalTermFreq("content");
-
+        float lambda = (float) 0.9;
         SimilarityBase custom = new SimilarityBase() {
-            protected float score(BasicStats stats, float freq, float docLen) {
+            protected float score(BasicStats stats, float v, float v1) {
 
-                return (float) (0.9*(freq/ docLen));
+                return (float) (lambda *(v/ sumTotalTermFreq));
             }
 
             @Override
@@ -85,10 +85,10 @@ public class UJM {
                         results.get(queryId).put(paraId,0.0f);
                     }
 
-                    float score = results.get(queryId).get(paraId);
+                    float score = scores[i].score;
 
                     //score += (float)(scores[i].score / (docSize + wordsSize));
-                    score += (float) Math.log10((scores[i].score + (0.1 * (totalTermFreq / sumTotalTermFreq))));
+                    score += (float)(scores[i].score + ((1-lambda) * (totalTermFreq / sumTotalTermFreq)));
                     results.get(queryId).put(paraId, score);
                 }
 
@@ -102,7 +102,7 @@ public class UJM {
             for (Map.Entry<String, Float> paraResult : paraResults.entrySet()) {
                 String paraId = paraResult.getKey();
                 //float score = paraResult.getValue();
-                float score = (float)Math.pow(10, paraResult.getValue());
+                float score = paraResult.getValue();
                 DocResults docResult = new DocResults(paraId, score);
                 docQueue.add(docResult);
             }
